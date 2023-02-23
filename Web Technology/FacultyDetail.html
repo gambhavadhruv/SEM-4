@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		faculty =
+		[
+			{photo:"<img src='abc.jpg' height='200px' width='200px'>",name:"Nilesh Gambhava",department:"CE",experience:"5 YEARS",city:"RAJKOT"},
+			{photo:"<img src='gs.jpg' height='200px' width='200px'>",name:"Vaseem Ghada",department:"ME",experience:"12 YEARS",city:"MORBI"},
+			{photo:"<img src='pj.jpg' height='200px' width='200px'>",name:"Dharmik Vasiyani",department:"EE",experience:"9 YEARS",city:"JAMNAGAR"},
+			{photo:"<img src='mt.jpg' height='200px' width='200px'>",name:"Mehul Bhundya",department:"CI",experience:"6 YEARS",city:"DHROLL"},
+		];
+
+		detail = faculty.map((fclt)=>{
+			return "<td>"+fclt.photo+'<br><br>'+"Name :  "+ fclt.name+"<br><br>" + "Dept : "+fclt.department+"<br><br>"+"Experience : "+fclt.experience+"<br><br>"+"City : "+fclt.city+"</td>"
+		})
+		
+
+		document.write("<table border='1px solid black' cellpadding='10px' align='center'>")
+		document.write("<tr>")
+		document.write(detail.join(''))
+		document.write("</tr>")
+		document.write("</table>")
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<table>
+	<tr>
+		<td>ENTER USERNAME</td>
+		<td> : </td>
+		<td>
+			<input type="text" id="txtpara1">
+		</td>
+	</tr>
+	<tr>
+		<td>ENTER PASSWORD</td>
+		<td> : </td>
+		<td>
+			<input type="password" id="txtpara2">
+		</td>
+		<td><input type="button" id="tglpass" value="SHOW" onclick="parashow()"></td>
+	</tr>
+	<br/>
+	<tr>
+		<td><input type="button" value="LOGIN" onclick="loginsys()"></td>
+	</tr>
+	</table>
+
+	<script type="text/javascript">
+		function loginsys(){
+			if(document.getElementById("txtpara1").value=="DHRUV" && document.getElementById("txtpara2").value=="9504"){
+				document.write("VALID USER");
+			}
+			else{
+				document.write("INVALID USER");
+			}
+		}
+		function parashow(){
+			var a = document.getElementById("txtpara2");
+			var b = document.getElementById("tglpass");
+			if (a.type=="password") {
+				a.type="text";
+				b.value="HIDE";
+			}
+			else{
+				a.type="password";
+				b.value="SHOW";
+			}
+		}
+	</script>
+
+</body>
+</html>

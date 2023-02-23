@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Old title</title>
+	<style type="text/css">
+		#ansDiv{
+			width: 60%;
+			height: 50vh;
+			border: 1px solid red;
+			position:  fixed;
+			top: 100px;
+			left: 200px;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="checkAll()">Check all</button>
+	<button onclick="uncheckAll()">Uncheck all</button><br/><br/>
+	<div id="ansDiv">
+		
+	</div>
+	<script type="text/javascript">
+		for(i=101;i<166;i++){
+			document.write("<input type='checkbox' onclick='abc()' value='"+i+"''> "+i+"<br/>");
+		}
+		for(i=201;i<286;i++){
+			document.write("<input type='checkbox' onclick='abc()' value='"+i+"''> "+i+"<br/>");
+		}
+		for(i=301;i<372;i++){
+			document.write("<input type='checkbox' onclick='abc()' value='"+i+"''> "+i+"<br/>");
+		}
+
+		function abc(){
+			var allStu = document.getElementsByTagName("input");
+			allAbs = "";
+			for(i=0;i<allStu.length;i++){
+				if(!allStu[i].checked){
+					allAbs += allStu[i].value + ", ";
+				}
+			}
+			document.getElementById("ansDiv").innerHTML = allAbs.substring(0,allAbs.length-2);
+		}
+
+		function checkAll(){
+			var allStu = document.getElementsByTagName("input");
+			for(i=0;i<allStu.length;i++){
+				allStu[i].checked = true;
+			}
+		}
+
+		function uncheckAll(){
+			var allStu = document.getElementsByTagName("input");
+			for(i=0;i<allStu.length;i++){
+				allStu[i].checked = false;
+			}
+		}
+	</script>
+</body>
+</html>

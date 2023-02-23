@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	ENTER TIME : 
+	<input type=" text" id="startcount">
+	<br/>
+	<br/>
+	<br/>
+	<button onclick="starttimer()">START TIMER</button>
+	<br/>
+	<br/>
+	<h1 id="ans"></h1>
+	<script type="text/javascript">
+		function printtime(){
+		var temp = document.getElementById("startcount").value;
+		temp--;
+		document.getElementById("startcount").value=temp;
+		if(temp==0){
+			document.getElementById("startcount").value=temp;
+			clearInterval(c);
+			document.getElementById("ans").innerHTML="HAPPY BIRTHDAY!!!";
+
+		}
+	}
+	function starttimer(){
+		c=setInterval(printtime,1000);
+	}
+	</script>
+</body>
+</html>
